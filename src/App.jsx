@@ -37,7 +37,9 @@ export default function Board() {
         <Square value={squares[7]} onSquareClick={() => handleClick(7)} />
         <Square value={squares[8]} onSquareClick={() => handleClick(8)} />
       </div>
-      <div>{winner && <h1>The winner is: {winner}</h1>}</div>
+      <div>
+        <h1>{winner ? `The winner is: ${winner}`  : `Next player: ${xIsNext ? "X" : "O"}`}</h1>
+      </div>
     </>
   );
 }
